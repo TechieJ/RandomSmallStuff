@@ -1,7 +1,9 @@
 import time
+from functools import wraps
 
 def timer(func):
   """ Calculating the time taken by a function to run """
+  @wraps(func) # this is used to remember the original function metadata. Very useful in stacktrace. Without this, python will only remember the wrapper metadata instead.
   def wrapper(*args, **kwargs):
     """ wrapper function to call the original function
         It can be named anything.
@@ -16,6 +18,7 @@ def timer(func):
 
 def logger(func):
   """ Add logging for function """
+  @wraps(func) # this is used to remember the original function metadata. Very useful in stacktrace. Without this, python will only remember the wrapper metadata instead.
   def wrapper(*args, **kwargs):
     """ wrapper function to call the original function
         It can be named anything.
