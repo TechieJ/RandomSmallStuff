@@ -3,7 +3,7 @@ List Flattening using recursion and other methods too.
 input - [[1, 2, 3], [4]]
 output - [1, 2, 3, 4]
 """
-# Method 1: Recurrsion
+# Method 1: Recurrsion. Risk of recurrsion depth limit.
 def flatten(seq):
   """ This can handle any arbitrary depth of nesting """
   for x in seq:
