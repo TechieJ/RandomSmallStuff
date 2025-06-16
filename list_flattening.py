@@ -25,7 +25,7 @@ b = [item for sublist in a for item in sublist]
 # Method 4: Star unpacking (When you already know the length)
 b = [*a[0], *a[1]]
 
-# Method 5:  Iterative stack (No recurrsion)
+# Method 5:  Iterative stack for deep nesting (No recurrsion and Eliminates python recurrsion depth ceiling)
 from collections import deque
 from collections.abc import Iterable
 
